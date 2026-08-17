@@ -1,0 +1,19 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.tfvars
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Generated files
+dist/
+build/
+coverage/
+*.log
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
