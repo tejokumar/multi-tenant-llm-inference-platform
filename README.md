@@ -8,9 +8,11 @@ The learning narrative is published on [tejo.dev](https://tejo.dev/projects/mult
 
 ## Current milestone
 
-**1. Serve one request — in progress**
+**2. Measure one worker — next**
 
-Run one model on one GPU worker in GKE Autopilot and send one request through an OpenAI-compatible API.
+Milestone 1 is complete. We ran one model on one GPU worker, sent normal and streaming requests, reproduced a missing-GPU failure, and removed every lab resource.
+
+The verified deployment uses Qwen3-1.7B, vLLM 0.26.0, one NVIDIA L4 on `g2-standard-8`, and `us-east1-c`. See the [milestone result](evidence/milestone-01/result.md) and [runbook](docs/runbooks/milestone-01.md).
 
 ## Functional milestones
 
@@ -40,6 +42,10 @@ Progress is based on completed functionality and verified learning outcomes. It 
 | `tests/` | Integration and load tests |
 
 The directories contain short guidance now. Working artifacts will replace or extend that guidance as each milestone begins.
+
+## Cost boundary
+
+The verified GPU worker is estimated at about $0.96 for each hour it runs, before storage and network charges. The cheaper `g2-standard-4` shape was unavailable during the experiment. The Kubernetes Service is private. Always follow the cleanup step in the runbook when an experiment ends.
 
 ## Rules for an experiment
 
