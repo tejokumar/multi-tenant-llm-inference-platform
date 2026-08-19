@@ -8,9 +8,17 @@ required_files=(
   docs/decisions/README.md
   docs/architecture/README.md
   docs/runbooks/README.md
+  docs/milestones/01-serve-one-request.md
+  docs/runbooks/milestone-01.md
+  docs/decisions/0005-move-the-first-worker-to-us-east1.md
+  docs/decisions/0006-disable-kubernetes-service-links-for-vllm.md
   infrastructure/README.md
+  infrastructure/terraform/main.tf
+  infrastructure/kubernetes/base/kustomization.yaml
   experiments/README.md
+  experiments/001-missing-gpu/pod.yaml
   evidence/README.md
+  evidence/milestone-01/result.md
 )
 
 for file in "${required_files[@]}"; do

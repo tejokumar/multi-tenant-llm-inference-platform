@@ -5,6 +5,7 @@
 *.tfvars
 *.tfstate
 *.tfstate.*
+*.tfplan
 .terraform/
 
 # Generated files

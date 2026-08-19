@@ -1,0 +1,16 @@
+apiVersion: cloud.google.com/v1
+kind: ComputeClass
+metadata:
+  name: l4-medium-us-east1-c
+spec:
+  priorityDefaults:
+    location:
+      zones:
+        - us-east1-c
+  priorities:
+    - machineType: g2-standard-8
+      gpu:
+        type: nvidia-l4
+        count: 1
+  nodePoolAutoCreation:
+    enabled: true
